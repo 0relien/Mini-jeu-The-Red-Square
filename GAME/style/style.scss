@@ -1,0 +1,23 @@
+// ./style/dart-sass/sass ./style/style.scss ./style/style.css --watch
+
+$square-size: 8px;
+
+.square{
+    height: $square-size;
+    width: $square-size;
+
+    position:relative;
+
+    background-color: rgb(201, 0, 0);
+    border: solid 2px black;
+
+    border-radius: 2px;
+
+    transition-property: left top;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+}
+
+.area{
+    
+}

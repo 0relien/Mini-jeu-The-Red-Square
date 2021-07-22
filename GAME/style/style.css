@@ -1,0 +1,13 @@
+.square {
+  height: 8px;
+  width: 8px;
+  position: relative;
+  background-color: #c90000;
+  border: solid 2px black;
+  border-radius: 2px;
+  transition-property: left top;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+/*# sourceMappingURL=style.css.map */
