@@ -1,13 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay .start {
+  font-family: "Nova Square", cursive;
+  font-size: 2rem;
+  color: white;
+  user-select: none;
+}
+
+@keyframes viewoff {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.viewoff {
+  animation: 0.5s forwards viewoff;
+}
+
+.titlestart {
+  animation: 0.5s ease-out forwards titlestart;
+}
+
+@keyframes titlestart {
+  from {
+    font-size: 2rem;
+  }
+  to {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .area {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .area {
+    width: 200px;
+    height: 200px;
+  }
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background: linear-gradient(#19e854, #19c9e8, #1938e8, #6a00ff, #1938e8, #19c9e8 #19e854);
+  background-position: center center;
+  background-size: 100% 100vh;
+}
+
 .square {
-  height: 8px;
-  width: 8px;
+  height: 10px;
+  width: 10px;
   position: relative;
   background-color: #c90000;
-  border: solid 2px black;
+  outline: solid 2px #010101;
   border-radius: 2px;
   transition-property: left top;
-  transition-duration: 0.1s;
   transition-timing-function: linear;
+}
+
+.area {
+  background-color: #fffc9d;
+  outline: solid 10px black;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,17 @@
+$areasize2: 400px;
+$areasize1: 200px;
+
+
+@media screen and (min-width: 800px) {
+    .area{
+        width: $areasize2;
+        height: $areasize2;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .area{
+        width: $areasize1;
+        height: $areasize1;
+    }
+}

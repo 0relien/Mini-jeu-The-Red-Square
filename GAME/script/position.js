@@ -8,8 +8,13 @@ function elementPosition (a) {
     }
 }
 
-
 document.addEventListener('keydown', function(){
-    var positions = elementPosition(square);
-    
+    var positionArea = elementPosition(area);
+    var positionSquare = elementPosition(square);
+    // console.log(positions)
+    console.log("Area Position")
+    console.log(positionArea)
+    console.log("Square Position")
+    console.log(positionSquare)   
 });
+

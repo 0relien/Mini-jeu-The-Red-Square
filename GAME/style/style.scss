@@ -1,6 +1,24 @@
 // ./style/dart-sass/sass ./style/style.scss ./style/style.css --watch
 
-$square-size: 8px;
+@import 'fonts';
+@import 'overlay';
+@import 'media';
+
+$square-size: 10px;
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    height:100vh;
+
+    overflow: hidden;
+    margin:0;
+    background: linear-gradient(rgb(25, 232, 84), rgb(25, 201, 232), rgb(25, 56, 232), rgb(106, 0, 255), rgb(25, 56, 232), rgb(25, 201, 232)rgb(25, 232, 84));
+    background-position: center center;
+    background-size: 100% 100vh;
+}
+
 
 .square{
     height: $square-size;
@@ -9,15 +27,16 @@ $square-size: 8px;
     position:relative;
 
     background-color: rgb(201, 0, 0);
-    border: solid 2px black;
+    outline: solid 2px rgb(1, 1, 1);
 
     border-radius: 2px;
 
     transition-property: left top;
-    transition-duration: 0.1s;
     transition-timing-function: linear;
 }
 
-.area{
-    
+.area{   
+
+    background-color: rgb(255, 252, 157);
+    outline: solid 10px rgb(0, 0, 0);
 }

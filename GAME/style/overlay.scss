@@ -1,0 +1,52 @@
+
+.overlay{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100vh;
+
+    z-index: 10;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    .start{
+        font-family: 'Nova Square', cursive;
+        font-size: 2rem;
+        color:white;
+        user-select: none;
+    }
+}
+
+@keyframes viewoff {
+    from{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    to{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.viewoff{
+    animation: 0.5s forwards viewoff;
+}
+
+
+///////////////////////////////////////
+.titlestart{
+    animation:0.5s ease-out forwards titlestart;
+}
+
+@keyframes titlestart {
+    from{
+        font-size: 2rem;
+    }
+    to{
+        font-size: 4rem;
+    }
+}
