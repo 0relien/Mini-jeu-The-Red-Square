@@ -52,7 +52,7 @@ function keyValue(e) {
         else if (keypress.left.indexOf(e.code) !== -1  && positionArea.clientX + 20 < positionSquare.clientX){
             moves.left = moves.left - speed
         }
-        else if (keypress.top.indexOf(e.code) !== -1){
+        else if (keypress.top.indexOf(e.code) !== -1 && positionArea.clientY + 20 < positionSquare.clientY){
             moves.top = moves.top - speed
         }
 
