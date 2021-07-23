@@ -1,5 +1,10 @@
+var positionArea = 0;
+var positionSquare = 0;
+
 function elementPosition (a) {
     var b = a.getBoundingClientRect();
+
+
     return {
         clientX: a.offsetLeft,
         clientY: a.offsetTop,
@@ -8,13 +13,18 @@ function elementPosition (a) {
     }
 }
 
-document.addEventListener('keydown', function(){
-    var positionArea = elementPosition(area);
-    var positionSquare = elementPosition(square);
-    // console.log(positions)
-    console.log("Area Position")
-    console.log(positionArea)
-    console.log("Square Position")
-    console.log(positionSquare)   
-});
+document.addEventListener('keydown', positions)
+
+function positions() {
+    positionArea = elementPosition(area);
+    positionSquare = elementPosition(square);
+    console.log(positionSquare.clientX)
+    
+};
+
+function positions2() {
+    positionArea = elementPosition(area);
+    positionSquare = elementPosition(square);
+}
+
 

@@ -62,7 +62,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  background: linear-gradient(#19e854, #19c9e8, #1938e8, #6a00ff, #1938e8, #19c9e8 #19e854);
+  background: linear-gradient(#19e854, #19c9e8, #1938e8);
   background-position: center center;
   background-size: 100% 100vh;
 }

@@ -36,13 +36,20 @@ function keyValue(e) {
         wait = 1
         console.log(e.code)
 
-        if (keypress.right.indexOf(e.code) !== -1) {
+        var areaStyle = window.getComputedStyle(area);
+        var areaWidth = parseInt(areaStyle.width, 10);
+        var positionAreaX = positionArea.clientX + areaWidth
+
+        var areaHeight = parseInt(areaStyle.height, 10);
+        var positionAreaY = positionArea.clientY + areaHeight
+
+        if (keypress.right.indexOf(e.code) !== -1 && positionAreaX > positionSquare.clientX + 20) {
         moves.left = moves.left + speed
         }
-        else if (keypress.bot.indexOf(e.code) !== -1) {
+        else if (keypress.bot.indexOf(e.code) !== -1 && positionAreaY > positionSquare.clientY + 20) {
             moves.top = moves.top + speed
         }
-        else if (keypress.left.indexOf(e.code) !== -1){
+        else if (keypress.left.indexOf(e.code) !== -1  && positionArea.clientX + 20 < positionSquare.clientX){
             moves.left = moves.left - speed
         }
         else if (keypress.top.indexOf(e.code) !== -1){
@@ -52,7 +59,11 @@ function keyValue(e) {
         square.style.top = moves.top + "px";
         square.style.left = moves.left + "px";
 
+        
+        
+        
         setTimeout( () =>{
+            positions2();
             wait = 0;
         }, smoothing)
     }
